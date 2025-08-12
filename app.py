@@ -215,7 +215,7 @@ def main():
                     st.session_state.df = result_df
                     st.session_state.sql = sql_query
                 else:
-                    st.warning("No data returned from query.")
+                    st.warning("Requested data is not available.")
             else:
                 st.error("Could not generate SQL query.")
     
@@ -224,10 +224,10 @@ def main():
         df = st.session_state.df
         sql = st.session_state.sql
         
-        st.subheader("🧠 Generated SQL")
-        st.code(sql, language="sql")
+        #st.subheader("🧠 Generated SQL")
+        #st.code(sql, language="sql")
         
-        st.subheader("📋 Query Results")
+        st.subheader("📋 Output")
         st.dataframe(df)
         
         # Show available columns
