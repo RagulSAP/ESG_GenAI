@@ -56,7 +56,7 @@ def load_data():
     # Try to load from CSV file, fallback to sample data
     try:
         df = pd.read_csv('sample_emissions.csv')
-        st.success("✅ Loaded data from sample_emissions.csv")
+        """st.success("✅ Loaded data from sample_emissions.csv")"""
     except FileNotFoundError:
         # Fallback sample data with quarters
         years = [2019, 2020, 2021, 2022, 2023]
