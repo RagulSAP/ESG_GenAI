@@ -215,6 +215,11 @@ def main():
                     st.session_state.df = result_df
                     st.session_state.sql = sql_query
                 else:
+                    # Clear previous results when no data found
+                    if "df" in st.session_state:
+                        del st.session_state.df
+                    if "sql" in st.session_state:
+                        del st.session_state.sql
                     st.warning("Requested data is not available.")
             else:
                 st.error("Could not generate SQL query.")
